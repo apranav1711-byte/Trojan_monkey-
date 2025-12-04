@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Shield, Menu, X, User, Bell } from "lucide-react";
+import { Shield, Menu, X, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { NotificationPanel } from "@/components/notifications/NotificationPanel";
 
 const navItems = [
   { label: "Dashboard", href: "/dashboard" },
@@ -53,10 +54,7 @@ export function Navbar() {
 
           {/* Right side actions */}
           <div className="hidden lg:flex items-center gap-4">
-            <Button variant="ghost" size="icon" className="relative">
-              <Bell className="w-5 h-5" />
-              <span className="absolute top-1 right-1 w-2 h-2 bg-destructive rounded-full animate-pulse" />
-            </Button>
+            <NotificationPanel />
             <Button variant="ghost" size="icon">
               <User className="w-5 h-5" />
             </Button>
@@ -101,9 +99,9 @@ export function Navbar() {
             </Link>
           ))}
           <div className="pt-4 flex gap-3">
-            <Button variant="ghost" size="icon">
-              <Bell className="w-5 h-5" />
-            </Button>
+            <div className="flex-1">
+              <NotificationPanel />
+            </div>
             <Button variant="ghost" size="icon">
               <User className="w-5 h-5" />
             </Button>

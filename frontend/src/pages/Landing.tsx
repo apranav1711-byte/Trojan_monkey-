@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Shield, Target, BarChart3, Upload, ArrowRight, Zap, Lock, Eye } from "lucide-react";
+import { Shield, Target, BarChart3, Upload, ArrowRight, Lock, Eye } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PageLayout } from "@/components/layout/PageLayout";
 
@@ -27,7 +27,6 @@ const features = [
 const stats = [
   { value: "99.9%", label: "Detection Accuracy" },
   { value: "< 50ms", label: "Analysis Speed" },
-  { value: "10M+", label: "Requests Analyzed" },
   { value: "24/7", label: "Monitoring" },
 ];
 
@@ -48,11 +47,6 @@ export default function Landing() {
 
         <div className="relative z-10 max-w-6xl mx-auto px-6 lg:px-10 text-center">
           <div className="animate-fade-up">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/30 mb-8">
-              <Zap className="w-4 h-4 text-primary" />
-              <span className="text-sm text-primary font-medium">Powered by Advanced ML</span>
-            </div>
-            
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
               Automated HTTP Attack
               <br />
@@ -81,7 +75,7 @@ export default function Landing() {
           </div>
 
           {/* Stats */}
-          <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 stagger-children">
+          <div className="mt-20 grid grid-cols-2 md:grid-cols-3 gap-8 stagger-children">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
                 <p className="text-3xl md:text-4xl font-bold text-primary mb-2">{stat.value}</p>

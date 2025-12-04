@@ -213,6 +213,15 @@ export function FlappyBird() {
             </div>
           ))}
 
+          {/* Score overlay during gameplay */}
+          {isPlaying && !gameOver && (
+            <div className="absolute top-4 left-1/2 -translate-x-1/2 z-10">
+              <div className="px-4 py-2 rounded-lg bg-background/90 backdrop-blur-sm border border-primary/30 shadow-glow">
+                <span className="text-lg font-bold text-primary">Score: {score}</span>
+              </div>
+            </div>
+          )}
+
           {/* Start/Game Over overlay */}
           {(!isPlaying || gameOver) && (
             <div className="absolute inset-0 bg-background/80 backdrop-blur-sm flex flex-col items-center justify-center gap-4">
