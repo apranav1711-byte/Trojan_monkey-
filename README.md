@@ -33,37 +33,17 @@ Prerequisites:
 - Database (Postgres, MySQL, MongoDB, etc.) reachable by the backend
 - Any required external services (Redis, object storage, auth provider)
 
-Install dependencies:
-- Node example:
+Run locally:--------------------------------------------
+- Node:
   ```bash
-  cd backend
-  npm install
+  cd backend (path of backend)
+  `npm start`
   ```
-- Python example:
+- Node:
   ```bash
-  cd backend
-  python -m venv .venv
-  source .venv/bin/activate
-  pip install -r requirements.txt
-  ```
-
-Environment
-- Copy the example env file and fill in values:
-  ```bash
-  cp backend/.env.example backend/.env
-  # Edit backend/.env and provide DB, secrets, etc.
-  ```
-
-Run locally:
-- Node example:
-  ```bash
-  cd backend
-  npm run dev      # or `npm start` for production
-  ```
-- Python example:
-  ```bash
-  export FLASK_APP=app.py
-  flask run
+  cd frontend (path of frontend)
+  `npm install`
+  `npm run dev`
   ```
 
 Health and readiness:
