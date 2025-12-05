@@ -58,9 +58,6 @@ export function Navbar() {
             <Button variant="ghost" size="icon">
               <User className="w-5 h-5" />
             </Button>
-            <Button variant="cyber" size="sm">
-              Get Started
-            </Button>
           </div>
 
           {/* Mobile menu button */}
@@ -104,9 +101,6 @@ export function Navbar() {
             </div>
             <Button variant="ghost" size="icon">
               <User className="w-5 h-5" />
-            </Button>
-            <Button variant="cyber" className="flex-1">
-              Get Started
             </Button>
           </div>
         </div>
